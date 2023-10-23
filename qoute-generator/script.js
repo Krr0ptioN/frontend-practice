@@ -1,6 +1,7 @@
 
 let quotes = [];
 const apiURL = 'https://type.fit/api/quotes';
+const twitterApiURL = 'https://twitter.com/intent/tweet';
 
 async function fetchQuotes() {
     try {
@@ -40,4 +41,11 @@ async function getRandomQuote() {
 getRandomQuote();
 $('.new-quote-button').click(function() {
     getRandomQuote();
+});
+
+$('.twitter-button').click(function() {
+    const text = $('#quote').text();
+    const author = $('#author').text();
+    const twitterURL = `${twitterApiURL}?text=${text} - ${author}`
+    window.open(twitterURL, '_blank');
 });
