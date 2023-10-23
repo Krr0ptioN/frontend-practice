@@ -4,7 +4,7 @@
 Generate and fetch random quotes from a third-party library.
 
 ### Tasks
-- [ ] Background image
+- [X] Background image
 - [ ] Third party API class SDK
 - [ ] Style the quote and message box
 
