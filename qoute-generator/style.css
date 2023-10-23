@@ -20,8 +20,47 @@ body {
 }
 
 .quote-container {
-    display: flex;
-    border: 1px solid;
+    width: auto;
+    max-width: 900px;
     border-radius: 10px;
-    padding: 2vh;
+    padding: 2vh 3vh;
+    box-shadow: 0 10px 10px 10px rgb(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.quote-text {
+    font-size: 2.50rem;
+}
+
+.fa-quote-left {
+    font-size: 4rem;
+}
+
+.long-quote {
+    font-size: 2rem;
+}
+
+#author {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.quote-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 0.5em;
+}
+
+.twitter-button:hover {
+    color: #21B5F6;
 }
