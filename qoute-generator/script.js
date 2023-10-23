@@ -17,7 +17,7 @@ async function fetchQuotes() {
 }
 function randomQuoteId() {
     const min = 0;
-    const max = quotes.length;
+    const max = quotes.length - 1;
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -27,6 +27,11 @@ async function getRandomQuote() {
     }
 
     let quote = quotes[randomQuoteId()];
+    if (quote.text.length > 15) {
+        $('quote').addClass('long-quote');
+    } else {
+        $('quote').removeClass('long-quote');
+    }
     $('#quote').text(quote.text);
     $('#author').text(quote.author.split(',')[0]);
 
