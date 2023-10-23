@@ -5,8 +5,8 @@ Generate and fetch random quotes from a third-party library.
 
 ### Tasks
 - [X] Background image
-- [ ] Third party API class SDK
-- [ ] Style the quote and message box
+- [X] Third party API class SDK
+- [X] Style the quote and message box
 
 ### How does it work?
 Once you click "New Quote" button fetches quote from a third-party library and displays it by converting the json string to string from the third-party api response.
