@@ -54,13 +54,35 @@ body {
 
 button {
     font-size: 1rem;
-    background-color: #000;
+    background-color: #333;
     color: #fff;
     border-radius: 5px;
-    border: 0px solid;
+    border: none;
     padding: 0.5em;
+    cursor: pointer;
+    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
+
+}
+
+button:active {
+    transform: translate(0,0.3rem);
+    box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.new-quote-button:hover {
+    color: yellow;
 }
 
 .twitter-button:hover {
     color: #21B5F6;
+}
+
+@media screen and (max-width: 1000px) {
+    .quote-container {
+        margin: auto 10px;
+    }
+
+    .quote-text {
+        font-size: 2.5rem;
+    }
 }
