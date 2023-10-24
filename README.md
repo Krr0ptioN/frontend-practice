@@ -2,10 +2,12 @@
 
 The purpose of this project is to practice react.js, javascript, css by building a series of small projects.
 
+### JQuery
 - [X] 01 Quote Generator
 - [ ] 02 Infinity Scroll
 - [ ] 03 Picture In Picture
 - [ ] 04 Joke Teller
+### React.js
 - [ ] 05 Light & Dark Mode
 - [ ] 06 Animated Template
 - [ ] 07 Navigation Nation
