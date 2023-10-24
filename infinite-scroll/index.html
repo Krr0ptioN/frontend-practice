@@ -3,16 +3,53 @@
 
 <head>
     <!-- TODO Project Title -->
-    <title></title>
+    <title>Infinite Scroll</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <script src="script.js"></script>
-
+    <div class="loader-container">
+        <img class="loader" src="assets/Double Ring-1s-118px.svg" alt="">
+    </div>
+    <div class="post-container">
+        <div class="post post-template post-hidden">
+            <div class="post-top-bar">
+                <div>
+                    <i class="fas fa-user"></i>
+                    <span class="post-user-fullname"> mohsen ameri</span>
+                    <span class="post-username"> @clevelandart</span>
+                </div>
+                <div class="">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="post-location"> USA, Los Angles</span>
+                </div>
+            </div>
+            <div class="post-image">
+                <img src="https://plus.unsplash.com/premium_photo-1668383207188-f5474588d674?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MTk5MDJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTgxODUyMTV8&ixlib=rb-4.0.3&q=80&w=1080"
+                    alt="a man and a woman sitting at a table writing">
+            </div>
+            <div class="post-bottom-bar">
+                <div class="post-likes">
+                    <i class="fas fa-heart"> </i>
+                    <span class="like-number">12</span>
+                </div>
+                <div class="post-description">Egypt and Nubia, Volume II: Karnak 1848 Louis Haghe (British, 1806–1885)
+                    published by F. G. Moon,
+                    20
+                    Threadneedle Street, London after David Roberts (Scottish, 1796–1864) England, 19th century Color
+                    lithograph Support: Wove paper Sheet: 60.4 x 43.6 cm (23 3/4 x 17 3/16 in.); Image: 48.8 x 32.7 cm
+                    (19
+                    3/16 x 12 7/8 in.) Bequest of John Bonebrake 2012.191
+                    Cahttps://www.clevelandart.org/art/2012.191
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
