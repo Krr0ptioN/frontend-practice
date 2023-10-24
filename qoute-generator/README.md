@@ -13,5 +13,8 @@ Once you click "New Quote" button fetches quote from a third-party library and d
 
 ## Accomplishment
 ### What did you learn?
+- Using twitter API for intent
+- Incorperting basic JQuery 
+- Practicing basic flex-box and css styling
 ### What can you do now with this knowledge?
-
+- 
