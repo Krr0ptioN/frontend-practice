@@ -4,7 +4,7 @@ The purpose of this project is to practice react.js, javascript, css by building
 
 ### JQuery
 - [X] 01 Quote Generator
-- [ ] 02 Infinity Scroll
+- [X] 02 Infinity Scroll
 - [ ] 03 Picture In Picture
 - [ ] 04 Joke Teller
 ### React.js
