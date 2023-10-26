@@ -20,6 +20,17 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.7);
+    transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+    transition: all 0.4s ease-in-out;
+    transform: translateX(0);
+}
+
+.overlay-slide-left {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(-100vw);
 }
 
 nav, nav ul {
@@ -85,20 +96,20 @@ nav {
     width: 100%;
 }
 
+section#home a {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 1.5rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+}
+
 
 .nav-title {
     border-bottom: 1px solid var(--col-primary);
     color: var(--col-primary);
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-section#home {
-    display: block;
 }
 
 .hidden {
@@ -117,6 +128,12 @@ section {
     align-items: center;
 }
 
+.site-title {
+    position: relative;
+    display: block;
+    left: 0;
+}
+
 #home {
     background-image: url(./bg.jpg);
     background-repeat: no-repeat;
@@ -132,20 +149,29 @@ section {
     transition: 0.4s;
 }
 
+/* Rotate first bar */
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6x);
-    transform: rotate(-45deg) translate(-9px, 6x);
+  transform: rotate(-45deg) translate(-7px, 8px);
 }
 
+/* Fade out the second bar */
 .change .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 
+/* Rotate last bar */
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8x);
-    transform: rotate(45deg) translate(-8px, 8x);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
 
+.menu-bar-container {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  display: inline;
+  cursor: pointer;
+}
 
 span {
     text-transform: uppercase;
