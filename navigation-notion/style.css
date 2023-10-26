@@ -112,10 +112,6 @@ section#home a {
     color: var(--col-primary);
 }
 
-.hidden {
-    display: none;
-}
-
 div.header > div {
     position: relative;
     padding: 10px
