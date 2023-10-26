@@ -2,29 +2,31 @@
 const menuBars = $('.menu-bar-container');
 const overlay = $('#overlay')
 
-const navItemHome = $('#nav-1');
-const navItemAbout = $('#nav-2');
-const navItemSkills = $('#nav-3');
-const navItemProjects = $('#nav-4');
-const navItemContact = $('#nav-5');
+let navItems = [];
+for (let index = 1; index < 6; index++) {
+    navItems.push($(`#nav-${index}`));
+}
+
+function navAnimation(navItems, from, to) {
+    navItems.forEach((nav, i) => {
+        nav.removeClass(`slide-${from}-${i + 1}`)
+            .addClass(`slide-${to}-${i + 1}`)
+    });
+}
 
 function toggleNav() {
     menuBars.toggleClass('change');
     overlay.toggleClass('overlay-active');
     if (overlay.hasClass('overlay-active')) {
-        overlay.addClass('overlay-slide-right');
-        overlay.removeClass('overlay-slide-left');
+        overlay.addClass('overlay-slide-right').removeClass('overlay-slide-left');
+
+        navAnimation(navItems, 'out', 'in');
     } else {
-        overlay.addClass('overlay-slide-left');
-        overlay.removeClass('overlay-slide-right');
+        overlay.addClass('overlay-slide-left').removeClass('overlay-slide-right');
+        navAnimation(navItems, 'in', 'out');
     }
 }
 
 
 menuBars.click(function() { toggleNav() });
-
-navItemHome.click(function() { toggleNav() });
-navItemAbout.click(function() { toggleNav() });
-navItemSkills.click(function() { toggleNav() });
-navItemProjects.click(function() { toggleNav() });
-navItemContact.click(function() { toggleNav() });
+navItems.forEach((nav) => { nav.click(function() { toggleNav() }) });
