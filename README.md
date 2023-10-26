@@ -5,18 +5,18 @@ The purpose of this project is to practice react.js, javascript, css by building
 ### JQuery
 - [X] 01 Quote Generator
 - [X] 02 Infinity Scroll
-- [ ] 03 Picture In Picture
-- [ ] 04 Joke Teller
-### React.js
-- [ ] 05 Light & Dark Mode
-- [ ] 06 Animated Template
-- [ ] 07 Navigation Nation
-- [ ] 08 Music Player
+- [X] 03 Picture In Picture
+- [X] 04 Joke Teller
+- [X] 07 Navigation Nation
 - [ ] 09 Custom Countdown
 - [ ] 10 Book Keeper
 - [ ] 11 Video Player
-- [ ] 12 Form Validator
 - [ ] 13 Spock Rock Game
+### React.js
+- [ ] 05 Light & Dark Mode
+- [ ] 06 Animated Template
+- [ ] 08 Music Player
+- [ ] 12 Form Validator
 - [ ] 14 NASA APOD
 - [ ] 15 Math Sprint Game
 - [ ] 16 Drag n' Drop

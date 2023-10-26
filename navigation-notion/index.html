@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- TODO Project Title -->
+    <title>Navigation Notion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="overlay overlay-slide-left" id="overlay">
+        <nav>
+            <ul>
+                <li id="nav-1" class="col-black slide-out-1"><a href="#">Home</a></li>
+                <li id="nav-2" class="col-red slide-out-2"><a href="#about">About</a></li>
+                <li id="nav-3" class="col-orange slide-out-3"><a href="#skills">Skills</a></li>
+                <li id="nav-4" class="col-blue slide-out-4"><a href="#projects">Projects</a></li>
+                <li id="nav-5" class="col-green slide-out-5"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="menu-bar-container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <section id='home'>
+        <a href='#' class='nav-title'>Jacinto Design</a>
+    </section>
+    <section class="col-red" id='about'><span>This is my information</span></section>
+    <section class="col-orange" id='skills'><span>This is my skills</span></section>
+    <section class="col-blue" id='projects'><span>This is my projects</span></section>
+    <section class="col-green" id='contact'><span>This is my contacts info</span></section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
