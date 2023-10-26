@@ -14,7 +14,7 @@ body {
 }
 
 /* Video Background */
-.video-background {
+.bg-video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -49,7 +49,7 @@ video {
 
 }
 
-.input-container {
+.countdown-container {
   position: relative;
   top: 20px;
 }
@@ -126,7 +126,7 @@ li span {
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
-  .video-background {
+  .bg-video {
 
   }
   
