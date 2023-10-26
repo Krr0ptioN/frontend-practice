@@ -5,4 +5,25 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    background-image: url(./robot.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 20%;
+        background-color: #45BADD;
+    background-size: flat;
+}
+
+.btn {
+    background-color: #FF3482;
+    color: #fff;
+    width: 10rem;
+    font-size: 1.1rem;
+    height: 3rem;
+    position: fixed;
+    right: 50%;
+    transform: translate(50%,-50%);
+    border-radius: 3px;
+    border: 2px solid #FFF;
+    top: 50%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
