@@ -2,7 +2,7 @@
 
 ## Description
 ### Tasks
-- [ ] Basic styling
+- [X] Basic styling
 - [ ] "Add Bookmark" Dialog and button
 - [ ] List bookmarks
 - [ ] Retrieve favicon of the link
