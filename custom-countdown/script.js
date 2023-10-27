@@ -4,57 +4,48 @@ const inputContainer = $('.input-container');
 const countDownForm = $('#countdownForm');
 const countDownContainer = $('#countdown');
 const completeContainer = $('#complete');
+const completeInfo = $('#complete-info');
+const completeBtn = $('#complete-button');
 const resetCountdownButton = $('#countdown-button');
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
 const HOUR = MINUTE * 60;
 const DAY = HOUR * 24;
-
+const today = new Date().toISOString().split('T')[0];
+datePicker.attr('min', today);
 let countdownActive;
 
-class Steps {
-    constructor() {
-        this.steps = [inputContainer, countDownContainer, completeContainer];
-        this.currentStep = 0;
-    }
-
-    next() {
-        this.steps[this.currentStep].hide();
-        this.currentStep++;
-        this.steps[this.currentStep].show();
-    }
-
-    prev() {
-        this.steps[this.currentStep].hide();
-        this.currentStep--;
-        this.steps[this.currentStep].show();
-    }
-
-    input() {
-        this.steps.forEach((step) => { step.hide() });
-        this.currentStep = 0;
-        this.steps[this.currentStep].show();
-    }
-    countdown() {
-        this.steps.forEach((step) => { step.hide() });
-        this.currentStep = 1;
-        this.steps[this.currentStep].show();
-    }
-    complete() {
-        this.steps.forEach((step) => { step.hide() });
-        this.currentStep = 2;
-        this.steps[this.currentStep].show();
-    }
+function moveInput() {
+    completeContainer.hide();
+    countDownContainer.hide();
+    inputContainer.show();
+}
+function moveCountdown() {
+    inputContainer.hide();
+    completeContainer.hide();
+    countDownContainer.show();
+}
+function moveComplete() {
+    inputContainer.hide();
+    countDownContainer.hide();
+    completeContainer.show();
 }
 
-const steps = new Steps();
 
-resetCountdownButton.click(function() {
-    steps.prev();
+function reset() {
+    moveInput();
     clearInterval(countdownActive);
     countdown.date = "";
     countdown.title = "";
-})
+}
+
+resetCountdownButton.click(reset);
+completeBtn.click(reset);
+
+function completion() {
+    completeInfo.text(`${countdown.title} Finished on ${countdown.date}`);
+    moveComplete();
+}
 
 function updateCountdownDateDOM({ days, hours, minutes, seconds }) {
     $('#date-days').text(days);
@@ -79,6 +70,9 @@ function updateCountdown(countdownValue) {
     countdownActive = setInterval(() => {
         const now = new Date().getTime();
         const distance = countdownValue - now;
+        if (distance < 0) {
+            completion();
+        }
         updateCountdownDateDOM(calculateTime(distance));
     }, SECOND);
 }
@@ -89,8 +83,7 @@ let countdown = {
     date: "",
 }
 
-const today = new Date().toISOString().split('T')[0];
-datePicker.attr('min', today);
+
 
 function countdownHandler(e) {
     e.preventDefault();
@@ -100,7 +93,7 @@ function countdownHandler(e) {
         alert('Please make sure you provide correct date');
     } else {
         countdownValue = new Date(countdown.date).getTime();
-        steps.next();
+        moveCountdown();
         updateCountdownTitle(countdown.title);
         updateCountdown(countdownValue);
 
