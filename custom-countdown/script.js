@@ -80,10 +80,15 @@ function countdownHandler(e) {
     e.preventDefault();
     countdown.title = e.target[0].value;
     countdown.date = e.target[1].value;
-    countdownValue = new Date(countdown.date).getTime();
-    steps.next();
-    updateCountdownTitle(countdown.title);
-    updateCountdown(countdownValue);
+    if (countdown.date === "") {
+        alert('Please make sure you provide correct date');
+    } else {
+        countdownValue = new Date(countdown.date).getTime();
+        steps.next();
+        updateCountdownTitle(countdown.title);
+        updateCountdown(countdownValue);
+
+    }
 }
 
 countDownForm.submit(countdownHandler);
