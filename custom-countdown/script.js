@@ -35,6 +35,7 @@ function moveComplete() {
 function reset() {
     moveInput();
     clearInterval(countdownActive);
+    localStorage.removeItem('countdown');
     countdown.date = "";
     countdown.title = "";
 }
@@ -83,7 +84,19 @@ let countdown = {
     date: "",
 }
 
+function restoreLocalCountdown() {
+    const countdown = localStorage.getItem('countdown');
+    if (countdown) {
+        countDownStart(JSON.parse(countdown));
+    }
+}
 
+function countDownStart(countdown) {
+    countdownValue = new Date(countdown.date).getTime();
+    moveCountdown();
+    updateCountdownTitle(countdown.title);
+    updateCountdown(countdownValue);
+}
 
 function countdownHandler(e) {
     e.preventDefault();
@@ -92,12 +105,10 @@ function countdownHandler(e) {
     if (countdown.date === "") {
         alert('Please make sure you provide correct date');
     } else {
-        countdownValue = new Date(countdown.date).getTime();
-        moveCountdown();
-        updateCountdownTitle(countdown.title);
-        updateCountdown(countdownValue);
-
+        localStorage.setItem('countdown', JSON.stringify(countdown));
+        countDownStart(countdown);
     }
 }
 
+restoreLocalCountdown();
 countDownForm.submit(countdownHandler);
