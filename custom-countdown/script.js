@@ -29,6 +29,22 @@ class Steps {
         this.currentStep--;
         this.steps[this.currentStep].show();
     }
+
+    input() {
+        this.steps.forEach((step) => { step.hide() });
+        this.currentStep = 0;
+        this.steps[this.currentStep].show();
+    }
+    countdown() {
+        this.steps.forEach((step) => { step.hide() });
+        this.currentStep = 1;
+        this.steps[this.currentStep].show();
+    }
+    complete() {
+        this.steps.forEach((step) => { step.hide() });
+        this.currentStep = 2;
+        this.steps[this.currentStep].show();
+    }
 }
 
 const steps = new Steps();
