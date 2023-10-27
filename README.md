@@ -10,8 +10,8 @@ The purpose of this project is to practice react.js, javascript, css by building
 - [X] 07 Navigation Nation
 - [X] 09 Custom Countdown
 - [X] 10 Book Keeper
-- [ ] 11 Video Player
 - [ ] 13 Spock Rock Game
+- [ ] 17 Calculator
 ### React.js
 - [ ] 05 Light & Dark Mode
 - [ ] 06 Animated Template
@@ -20,7 +20,6 @@ The purpose of this project is to practice react.js, javascript, css by building
 - [ ] 14 NASA APOD
 - [ ] 15 Math Sprint Game
 - [ ] 16 Drag n' Drop
-- [ ] 17 Calculator
 - [ ] 18 Splash Page
 - [ ] 19 Paint Clone
 - [ ] 20 Pong
