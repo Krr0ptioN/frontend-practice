@@ -1,8 +1,18 @@
 
+const bookmarkTemplate = $('#bookmark-template').html();
+const container = $('.bookmark-container');
 const dialogCloseBtn = $('.dialog-times');
 const dialogContainer = $('.dialog-container');
 const dialogOverlay = $('.dialog-overlay');
 const addBookmarkBtn = $('#bookmark-add-btn');
+
+let bookmarks = [
+    {
+        icon: "https://ssl.gstatic.com/translate/favicon.ico",
+        url: "https://translate.google.com",
+        name: "Google Translate"
+    },
+];
 
 function closeDialog() {
     dialogContainer.hide();
@@ -23,8 +33,6 @@ addBookmarkBtn.click(function() {
     openDialog();
 });
 
-const bookmarkTemplate = $('#bookmark-template').html();
-const container = $('.bookmark-container');
 
 bookmarks.forEach(function(bookmark) {
     const $bookmark = $(bookmarkTemplate);
