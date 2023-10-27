@@ -22,3 +22,23 @@ dialogCloseBtn.click(function() {
 addBookmarkBtn.click(function() {
     openDialog();
 });
+
+const bookmarkTemplate = $('#bookmark-template').html();
+const container = $('.bookmark-container');
+
+bookmarks.forEach(function(bookmark) {
+    const $bookmark = $(bookmarkTemplate);
+    $bookmark.find('.bookmark-icon').attr('src', bookmark.icon);
+    $bookmark.find('.bookmark-item-link').attr('href', bookmark.url).text(bookmark.name);
+
+    container.append($bookmark);
+});
+
+// Add event listener to remove bookmarks
+container.on('click', '.remove-bookmark', function() {
+    $(this).closest('.bookmark-item').remove();
+});
+
+
+
+// TODO: Retrieve favicon
