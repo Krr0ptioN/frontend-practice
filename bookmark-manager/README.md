@@ -3,10 +3,12 @@
 ## Description
 ### Tasks
 - [X] Basic styling
-- [ ] "Add Bookmark" Dialog and button
-- [ ] List bookmarks
+- [X] "Add Bookmark" Dialog and button
+- [X] List bookmarks
 - [ ] Retrieve favicon of the link
-- [ ] Save the bookmarks in local file
+- [ ] Save the bookmarks in local file repopulate the bookmarks in restart
+- [ ] Closable dialog
+- [ ] append bookmark to the body with add dialog
 ### How does it work?
 
 ## Accomplishment

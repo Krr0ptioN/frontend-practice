@@ -64,3 +64,62 @@ i.fa-times {
     text-decoration: none;
         color: #FFF;
 }
+
+.dialog-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #FFF;
+    width: 40vw;
+}
+
+
+.dialog-container {
+    position: fixed;
+    z-index: 9;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.dialog-btn {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 6rem;
+    text-transform: capitalize;
+}
+
+.dialog-header {
+    padding:  0 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    color: #fff;
+}
+
+input {
+        background-color: #FFF;
+        border: 2px black solid ;
+        border-radius: 6px;
+        height: 20px;
+        padding: 5px;
+    }
+
+.dialog-times {
+        position: relative;
+    top: 10px;
+        color: #FFF;
+        font-size: 2rem;
+    }
