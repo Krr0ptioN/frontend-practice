@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bookmark Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="dialog-container" hidden>
+        <div class="dialog-header">
+            <h2>Add Bookmark</h2>
+            <i class="fas fa-times dialog-times"></i>
+        </div>
+        <form action="" id="dialog-form">
+            <label for="website-name">Website Name</label>
+            <input type="text" id="website-name">
+            <br>
+            <label for="website-url">Website URL</label>
+            <input type="text" id="website-url">
+            <br>
+            <button id="save-btn" class="dialog-btn" type="submit">Save</button>
+        </form>
+    </div>
+    <div class="dialog-overlay" hidden></div>
+    <div class="bookmark-container">
+        <div class="bookmark-add-container">
+            <button id="bookmark-add-btn" class="box" type="button">Add Bookmark</button>
+        </div>
+        <div class="bookmark-list-container">
+            <template id="bookmark-template">
+                <div class="bookmark-item">
+                    <img class="bookmark-icon" src="" alt="bookmark favicon">
+                    <a href="" class="bookmark-item-link"></a>
+                    <i class="fas fa-times remove-bookmark"></i>
+                </div>
+            </template>
+            <!-- Bookmark Component -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
