@@ -69,16 +69,33 @@ function addBookmark(bookmark) {
     updateLocalStorage();
 }
 
+const isURL = (url) => {
+    const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+    const regex = new RegExp(expression);
+    return url.match(regex)
+}
+
 function bookmarkSaveFormHandler(e) {
     e.preventDefault();
     let bookmark = {
         name: e.target[0].value,
         link: e.target[1].value,
     }
+    if (!bookmark.link || !bookmark.name) {
+        alert('All informations about bookmark must be provided.');
+    }
+
+    if (isURL(bookmark.link)) {
+        if (!bookmark.link.includes('https://', 'http://')) {
+            bookmark.link = `https://${bookmark.link}`;
+        }
+        addBookmark(bookmark);
+    } else {
+        alert("Invalid url provided");
+    }
     bookmark.icon = extractBookmarkIcon(bookmark.link);
 
     console.log(bookmark.name, bookmark.link, bookmark.icon)
-    addBookmark(bookmark);
 }
 
 
