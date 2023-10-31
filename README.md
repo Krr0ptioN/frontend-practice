@@ -10,7 +10,7 @@ The purpose of this project is to practice react.js, javascript, css by building
 - [X] 07 Navigation Nation
 - [X] 09 Custom Countdown
 - [X] 10 Book Keeper
-- [ ] 13 Spock Rock Game
+- [X] 13 Spock Rock Game
 - [ ] 17 Calculator
 ### React.js
 - [ ] 05 Light & Dark Mode
