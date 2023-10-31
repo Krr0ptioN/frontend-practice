@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- todo project title -->
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="header-container">
+            <h2>rock paper scissors lizard spock</h2>
+        </div>
+        <div class="game">
+            <div class="user-play player">
+                <div class="title">
+                    you - <span id="user-score">0</span>
+                </div>
+                <div class="players-options">
+                    <i id="user-rock" class="far fa-hand-rock"></i>
+                    <i id="user-paper" class="far fa-hand"></i>
+                    <i id="user-scissors" class="far fa-hand-scissors"></i>
+                    <i id="user-lizard" class="far fa-hand-lizard"></i>
+                    <i id="user-spock" class="far fa-hand-spock"></i>
+                </div>
+            </div>
+            <div class="computer-play player">
+                <div class="title">
+                    computer - <span id="computer-score">0</span>
+                </div>
+                <div class="players-options">
+                    <i id="computer-rock" class="far fa-hand-rock"></i>
+                    <i id="computer-paper" class="far fa-hand"></i>
+                    <i id="computer-scissors" class="far fa-hand-scissors"></i>
+                    <i id="computer-lizard" class="far fa-hand-lizard"></i>
+                    <i id="computer-spock" class="far fa-hand-spock"></i>
+                </div>
+            </div>
+            <div id="restart">
+                <div><i class="fas fa-repeat"></i></div>
+            </div>
+            <div>
+                <h3 id="game-msg">message </h3>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+
+:root {
+    --col-primary: #1B84FE;
+    --col-secondary: #B53439;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.selected {
+    color: black !important;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 60vh;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.game {
+    padding: 40px;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.game-msg {
+    display: flex;
+    justify-content: center;
+}
+
+.fas,.far {
+    font-size: 35px;
+    user-select: none;
+    cursor:pointer;
+}
+
+.header-container {
+    background-color: var(--col-primary);
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.user-play>div.players-options>i {
+    color: var(--col-primary);
+}
+
+div.computer-play>div.players-options>i {
+    color: var(--col-secondary);
+}
+
+.players-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.player {
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width:400px) {
+    .game-container {
+        width: 100vw;
+        margin: 10px;
+    }
+}
