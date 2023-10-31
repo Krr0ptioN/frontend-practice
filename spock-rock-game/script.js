@@ -1,15 +1,22 @@
 
+import { startConfetti, stopConfetti, removeConfetti } from './confetti.js';
 
-const actions = [
-    "rock", "paper", "scissors", "lizard", "spock"
-]
 
+const choices = {
+    rock: { name: "rock", defeats: ['lizard', 'scissors'] },
+    paper: { name: "paper", defeats: ['rock', 'spock'] },
+    scissors: { name: "scissors", defeats: ['lizard', 'paper'] },
+    lizard: { name: "lizard", defeats: ['paper', 'spock'] },
+    spock: { name: "spock", defeats: ['rock', 'scissors'] },
+}
+
+const actions = ["rock", "paper", "scissors", "lizard", "spock"];
 
 const $userScore = $('#user-score');
 const $computerScore = $('#computer-score');
 const $gameMessage = $('#game-msg');
 
-function getRandomElementFromArray(arr) {
+function computerChoiceGenerator(arr) {
     if (arr.length === 0) {
         return undefined; // Return undefined for an empty array.
     }
@@ -33,13 +40,24 @@ function computerWin() {
 
 
 function select(user, action) {
-    const $userChoice = $(`div#${user}-${action}>i`);
-    $userChoice.toggleClass('selected');
+    const $userChoice = $(`#${user}-${action}`);
+    $userChoice.addClass('selected');
+}
+
+function unselect(user, action) {
+    const $userChoice = $(`#${user}-${action}`);
+    $userChoice.removeClass('selected');
 }
 
 let userChoice = "";
 let computerChoice = "";
 
+function clearSelectedChoices() {
+    actions.forEach((action) => {
+        unselect('user', action);
+        unselect('computer', action);
+    })
+}
 
 function message(msg) {
     $gameMessage.text(msg);
@@ -83,26 +101,24 @@ function play(userChoice, computerChoice) {
     }
 }
 
-function celebrate() {
-
-}
-
 function userPlay() {
-    computerChoice = getRandomElementFromArray(actions);
+    computerChoice = computerChoiceGenerator(actions);
     select('user', userChoice);
     select('computer', computerChoice);
     switch (play(userChoice, computerChoice)) {
         case "user":
             userWin();
             message('You won!');
-            celebrate();
+            startConfetti();
             break;
         case "computer":
             computerWin();
             message('Computer Won :(');
+            stopConfetti();
             break;
         case "tie":
             tie();
+            stopConfetti();
             message('Tied!');
             break;
 
@@ -110,7 +126,8 @@ function userPlay() {
 }
 
 actions.forEach((action) => {
-    $(`div#user-${action}`).click(() => {
+    $(`#user-${action}`).click(() => {
+        clearSelectedChoices();
         userChoice = action;
         userPlay();
     });

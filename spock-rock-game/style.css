@@ -21,8 +21,8 @@ body {
     font-weight: 600;
 }
 
-.selected i {
-    color: black;
+.selected {
+    color: black !important;
 }
 
 .game-container {
@@ -61,11 +61,11 @@ body {
     align-items: center;
 }
 
-div.user-play>div.players-options>div>i {
+div.user-play>div.players-options>i {
     color: var(--col-primary);
 }
 
-div.computer-play>div.players-options>div>i {
+div.computer-play>div.players-options>i {
     color: var(--col-secondary);
 }
 
