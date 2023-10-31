@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <!-- TODO Project Title -->
+    <!-- todo project title -->
     <title></title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -14,38 +14,38 @@
 <body>
     <div class="game-container">
         <div class="header-container">
-            <h2>Rock Paper Scissors Lizard Spock</h2>
+            <h2>rock paper scissors lizard spock</h2>
         </div>
         <div class="game">
             <div class="user-play player">
                 <div class="title">
-                    You - <span class="score">0</span>
+                    you - <span id="user-score">0</span>
                 </div>
                 <div class="players-options">
-                    <div id="user-rock"> <i class="fas fa-hand-rock"></i></div>
-                    <div id="user-paper"> <i class="fas fa-hand"></i></div>
-                    <div id="user-scissor"> <i class="fas fa-hand-scissors"></i></div>
-                    <div id="user-lizard"> <i class="fas fa-hand-lizard"></i></div>
-                    <div id="user-spock"> <i class="fas fa-hand-spock"></i></div>
+                    <div id="user-rock"> <i class="far fa-hand-rock"></i></div>
+                    <div id="user-paper"> <i class="far fa-hand"></i></div>
+                    <div id="user-scissors"> <i class="far fa-hand-scissors"></i></div>
+                    <div id="user-lizard"> <i class="far fa-hand-lizard"></i></div>
+                    <div id="user-spock"> <i class="far fa-hand-spock"></i></div>
                 </div>
             </div>
             <div class="computer-play player">
                 <div class="title">
-                    Computer - <span class="score">0</span>
+                    computer - <span id="computer-score">0</span>
                 </div>
                 <div class="players-options">
-                    <div id="computer-rock"> <i class="fas fa-hand-rock"></i></div>
-                    <div id="computer-paper"> <i class="fas fa-hand"></i></div>
-                    <div id="computer-scissor"> <i class="fas fa-hand-scissors"></i></div>
-                    <div id="computer-lizard"> <i class="fas fa-hand-lizard"></i></div>
-                    <div id="computer-spock"> <i class="fas fa-hand-spock"></i></div>
+                    <div id="computer-rock"> <i class="far fa-hand-rock"></i></div>
+                    <div id="computer-paper"> <i class="far fa-hand"></i></div>
+                    <div id="computer-scissors"> <i class="far fa-hand-scissors"></i></div>
+                    <div id="computer-lizard"> <i class="far fa-hand-lizard"></i></div>
+                    <div id="computer-spock"> <i class="far fa-hand-spock"></i></div>
                 </div>
             </div>
-            <div class="div restart">
+            <div id="restart">
                 <div><i class="fas fa-repeat"></i></div>
             </div>
-            <div class="div game-msg">
-                <h3>Message </h3>
+            <div>
+                <h3 id="game-msg">message </h3>
             </div>
         </div>
     </div>

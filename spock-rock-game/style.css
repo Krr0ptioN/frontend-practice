@@ -21,12 +21,16 @@ body {
     font-weight: 600;
 }
 
+.selected i {
+    color: black;
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
     width: 40vw;
     height: 60vh;
-    border: 1px solid #000;
+    box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5);
     border-radius: 10px;
 }
 
@@ -43,8 +47,10 @@ body {
     justify-content: center;
 }
 
-.fas {
+.fas,.far {
     font-size: 35px;
+    user-select: none;
+    cursor:pointer;
 }
 
 .header-container {
@@ -72,4 +78,11 @@ div.computer-play>div.players-options>div>i {
 
 .player {
     margin-bottom: 15px;
+}
+
+@media screen and (max-width:400px) {
+    .game-container {
+        width: 100vw;
+        margin: 10px;
+    }
 }
