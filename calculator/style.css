@@ -1,0 +1,175 @@
+:root {
+    --col-grey-light: #C5C5C5;
+    --col-grey: grey;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 70vh;
+}
+
+.calculator {
+    background-color: #FFF;
+    border-radius: 6px;
+    width: 500px;
+}
+
+.input {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    background-color: black;
+    color: #FFF;
+    text-align: right;
+    height: 6rem;
+    padding: 10px;
+    font-size: 4rem;
+    &::-webkit-scrollbar {
+          width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+          background: black; 
+    }
+     
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+          background: #888; 
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+          background: #555; 
+    }
+}
+
+.board {
+    display: grid;
+    grid-template: 
+        "op-plus    op-minus     op-times    op-division"
+        "num-7    num-8     num-9   op-equal"
+        "num-4    num-5     num-6   op-equal"
+        "num-1    num-2     num-3   op-equal"
+        "decimal    num-zero     op-clean    op-equal" ;
+    background-color: #FFF;
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+button {
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    width: auto;
+    height: 3rem;
+    padding: none;
+    &:hover {
+        filter: brightness(90%);
+        cursor: pointer;
+    }
+    &:active {
+        transform: translateY(1px);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn-number {
+    background-color: var(--col-grey-light);
+    color: black;
+}
+.btn-operator {
+    background-color: var(--col-grey);
+    color: white;
+}
+.btn-clean {
+    background-color: red;
+    color: white;
+}
+.btn-equal {
+    background-color: #0DCE57;
+    color: white;
+}
+
+#op-plus {
+    grid-area: op-plus;
+}
+#op-minus {
+    grid-area: op-minus;
+}
+#op-times {
+    grid-area: op-times;
+}
+#op-division {
+    grid-area: op-division;
+}
+#num-9 {
+    grid-area: num-9;
+}
+#num-8 {
+    grid-area: num-8;
+}
+#num-7 {
+    grid-area: num-7;
+}
+#num-6 {
+    grid-area: num-6;
+}
+#num-5 {
+    grid-area: num-5;
+}
+#num-4 {
+    grid-area: num-4;
+}
+#num-3 {
+    grid-area: num-3;
+}
+#num-2 {
+    grid-area: num-2;
+}
+#num-1 {
+    grid-area: num-1;
+}
+#op-equal {
+    grid-area: op-equal;
+    height: unset;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+#num-zero {
+    grid-area: num-zero;
+}
+#op-clean {
+    grid-area: op-clean;
+}
+
+@media screen and (max-width: 600px) {
+    .calculator {
+        width: 90vw;
+    }
+    .calculator-container {
+        width: 90vw;
+    }
+}
