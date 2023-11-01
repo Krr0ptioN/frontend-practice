@@ -1,10 +1,9 @@
 # Project title
 
 ## Description
-### Tasks
-### How does it work?
-
+Infinite scroll over hundreds of pictures from Unsplash.
+To use the application, get official API key from the [unsplash.com](https://unsplash.com/).
 ## Accomplishment
 ### What did you learn?
-### What can you do now with this knowledge?
+- Implementing popular infinite scroll
 

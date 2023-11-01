@@ -1,10 +1,4 @@
-# Project title
-
+# Navigation notion
+![screenshot](./docs/navigation-notion.png)
 ## Description
-### Tasks
-### How does it work?
-
-## Accomplishment
-### What did you learn?
-### What can you do now with this knowledge?
-
+Example of full-screen navigation menu with motion and animation effects.

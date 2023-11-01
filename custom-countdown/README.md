@@ -1,5 +1,9 @@
 # Countdown
 
+![screenshot](./docs/custom-countdown.png)
+![screenshot2](./docs/custom-countdown-countdown.png)
+![screenshot3](./docs/custom-countdown-complete.png)
+
 ## Description
 ### How does it work?
 - There is a main contain which contain all three state and step of the user action.

@@ -1,5 +1,6 @@
 # Quote Generator
 
+![screenshot](./docs/quote-generator.png)
 ## Description
 Generate and fetch random quotes from a third-party library.
 
@@ -16,5 +17,3 @@ Once you click "New Quote" button fetches quote from a third-party library and d
 - Using twitter API for intent
 - Incorperting basic JQuery 
 - Practicing basic flex-box and css styling
-### What can you do now with this knowledge?
-- 

@@ -1,10 +1,4 @@
-# Project title
-
+# Joke teller
+![screenshot](./docs/joke-teller.png)
 ## Description
-### Tasks
-### How does it work?
-
-## Accomplishment
-### What did you learn?
-### What can you do now with this knowledge?
-
+Want to hear joke instead of reading? Well, I have best jokes with terrifying delivery, hear from me.

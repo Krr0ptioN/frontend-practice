@@ -1,10 +1,5 @@
-# Project title
-
+# Calculator
+![screenshot](./docs/calculator.png)
 ## Description
-### Tasks
-### How does it work?
-
-## Accomplishment
-### What did you learn?
-### What can you do now with this knowledge?
+Responsive calculator implemented by incorporating CSS grid.
 
