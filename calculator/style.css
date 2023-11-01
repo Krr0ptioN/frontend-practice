@@ -20,14 +20,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
-    height: 70vw;
+    width: 500px;
+    height: 70vh;
 }
 
 .calculator {
     background-color: #FFF;
     border-radius: 6px;
-    width: 50vw;
+    width: 500px;
 }
 
 .input {
@@ -167,6 +167,9 @@ button {
 
 @media screen and (max-width: 600px) {
     .calculator {
+        width: 90vw;
+    }
+    .calculator-container {
         width: 90vw;
     }
 }
