@@ -1,4 +1,13 @@
 
-// Script init
+const btnPlus = $('#op-plus');
+const btnMinus = $('#op-minus');
+const btnTimes = $('#op-times');
+const btnDivision = $('#op-division');
 
-console.log('script-init');
+const Number = ;
+
+let expression = "";
+
+array.forEach(element => {
+
+});
