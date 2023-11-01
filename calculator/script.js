@@ -6,76 +6,25 @@ const $input = $('.input');
 
 const numbers = Array.from({ length: 9 }, (_, i) => i + 1);
 const operators = ['+', '-', '/', '*'];
-let expression = "";
 
-function express(n) {
-    expression += n;
-}
+let firstOperand = "";
+let operator = "";
+let secondOperand = "";
 
-function isOperatorIsLast() {
-    return operators.includes(expression.slice(-1));
-}
 
-function alterOperator(op) {
-    expression = expression.slice(0, -1) + op;
-}
 
-function splitStringByCharacters(inputString, charactersArray) {
-    const filteredCharactersArray = charactersArray.filter(char => char !== '.'); // Exclude dot from split characters
-    const regex = new RegExp(`[${filteredCharactersArray.join('')}]`, 'g');
-    return inputString.split(regex);
-}
-function splitExpression(inputString, charactersArray) {
-    const operatorsPattern = charactersArray.map(char => `\\${char}`).join('|');
-    const regex = new RegExp(`(?<=${operatorsPattern})|(?=${operatorsPattern})`, 'g');
-    const parts = inputString.split(regex);
-
-    // Combine decimal numbers that were split into separate parts
-    const result = [];
-    let buffer = "";
-
-    for (const part of parts) {
-        if (part.match(/[0-9.]/)) {
-            // If the part is a digit or a dot, add it to the buffer
-            buffer += part;
-        } else {
-            // If the part is an operator, push the buffer (which may contain a decimal number) to the result
-            if (buffer) {
-                result.push(buffer);
-                buffer = "";
-            }
-            result.push(part);
-        }
-    }
-
-    // Push any remaining buffer content to the result
-    if (buffer) {
-        result.push(buffer);
-    }
-
-    return result;
-}
-
-function getLastOperande() {
-    const operandes = splitStringByCharacters(expression, operators);
-    return operandes[operandes.length - 1];
-}
-
-function isOperandTwo() {
-    const operandes = splitStringByCharacters(expression, operators);
-    return operandes.length === 2;
+function isAllSet() {
+    return firstOperand !== 0 && secondOperand !== 0;
 }
 
 function updateInput(output) {
     $input.text(output);
 }
 
-function evaluate(expression) {
-    const parsed = splitExpression(expression, operators);
-    console.log(parsed);
-    const operand1 = parseFloat(parsed[0]);
-    const operand2 = parseFloat(parsed[2]);
-    switch (parsed[1]) {
+function evaluate() {
+    const operand1 = parseFloat(firstOperand);
+    const operand2 = parseFloat(secondOperand);
+    switch (operator) {
         case '+':
             return operand1 + operand2;
         case '-':
@@ -87,22 +36,25 @@ function evaluate(expression) {
     }
 }
 
-function instantEvaluate() {
-    expression = String(evaluate(expression));
-    updateInput(expression);
+function isAllSet() {
+    return firstOperand !== "" && operator !== "" && secondOperand !== "";
 }
 
-function operatorEventHandler(operator) {
-    if (isOperatorIsLast()) {
-        alterOperator(operator);
-    } else {
-        if (isOperandTwo()) {
-            instantEvaluate();
-            express(operator);
-        } else {
-            express(operator);
-        }
+function instantEvaluate() {
+    if (isAllSet()) {
+        firstOperand = String(evaluate());
+        updateInput(firstOperand);
     }
+}
+
+function operatorEventHandler(inputOperator) {
+    operator = inputOperator;
+}
+
+function reset() {
+    firstOperand = "";
+    secondOperand = "";
+    operator = "";
 }
 
 btnPlus.click(() => {
@@ -123,12 +75,12 @@ btnDivision.click(() => {
 
 numbers.forEach(number => {
     $(`#num-${number}`).click(() => {
-        if (isOperatorIsLast()) {
-            express(number);
-            updateInput(number);
+        if (operator === "") {
+            firstOperand += number
+            updateInput(firstOperand);
         } else {
-            express(number);
-            updateInput(expression);
+            secondOperand += number;
+            updateInput(secondOperand);
         }
     });
 });
@@ -138,14 +90,16 @@ $('#op-equal').click(() => {
 });
 
 $('#decimal').click(() => {
-    const lastChar = expression.slice(-1);
-    if (lastChar !== '.' && !lastChar.match(/[+\-*/.]/)) {
-        express('.');
-        updateInput(getLastOperande() + '.');
+    if (operator === "") {
+        firstOperand += ".";
+        updateInput(firstOperand);
+    } else {
+        secondOperand += ".";
+        updateInput(secondOperand);
     }
 });
 
 $('#op-clean').click(() => {
-    expression = "";
+    reset();
     updateInput("");
 })
