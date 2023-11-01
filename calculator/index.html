@@ -2,17 +2,40 @@
 <html lang="en">
 
 <head>
-    <!-- TODO Project Title -->
-    <title></title>
+    <title>Calculator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="input"></div>
+            <div class="board">
+                <button class="btn-operator" id="op-plus"><i class="fas fa-plus"></i></button>
+                <button class="btn-operator" id="op-minus"><i class="fas fa-minus"></i></button>
+                <button class="btn-operator" id="op-times"><i class="fas fa-times"></i></button>
+                <button class="btn-operator" id="op-division"><i class="fas fa-divide"></i></button>
+                <button class="btn-number" id="num-9">9</button>
+                <button class="btn-number" id="num-8">8</button>
+                <button class="btn-number" id="num-7">7</button>
+                <button class="btn-number" id="num-6">6</button>
+                <button class="btn-number" id="num-5">5</button>
+                <button class="btn-number" id="num-4">4</button>
+                <button class="btn-number" id="num-3">3</button>
+                <button class="btn-number" id="num-2">2</button>
+                <button class="btn-number" id="num-1">1</button>
+                <button class="btn-equal" id="op-equal"><i class="fas fa-equals"></i></button>
+                <button class="btn-number" id="decimal">.</button>
+                <button class="btn-number" id="num-zero">0</button>
+                <button class="btn-clean" id="op-clean">C</button>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
-
 </body>
 
 </html>
