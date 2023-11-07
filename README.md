@@ -4,7 +4,7 @@ The purpose of this project is to practice react.js, javascript, css by building
 
 ### JQuery
 - [X] [01 Quote Generator](https://github.com/krr0ption/frontend-practice/tree/main/qoute-generator)
-- [X] [02 Infinity Scroll](https://github.com/Krr0ptioN/frontend-practice/tree/main/infinity-scroll)
+- [X] [02 Infinity Scroll](https://github.com/Krr0ptioN/frontend-practice/tree/main/infinite-scroll)
 - [X] [03 Picture In Picture](https://github.com/Krr0ptioN/frontend-practice/tree/main/picture-in-picture)
 - [X] [04 Joke Teller](https://github.com/Krr0ptioN/frontend-practice/tree/main/joke-teller)
 - [X] [07 Navigation Nation](https://github.com/Krr0ptioN/frontend-practice/tree/main/navigation-notion)
