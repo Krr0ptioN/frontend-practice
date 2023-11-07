@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald');
 
 
 :root {
@@ -14,15 +14,15 @@
     --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
-[dark-theme="dark"] {
+[data-theme="dark"] {
     --col-primary: #8B39FF;
-    --col-primary: #6c63ff;
+    --col-primary-variant: #6c63ff;
     --col-secondary: #03dac6;
     --col-bg:#121212;
-    --on-primary: #000;
+    --col-text: #E6E4E4;
+    --on-primary: #E6E4E4;
     --on-bg-alt: rgba(255, 255, 255, 0.9);
     --on-bg-alt: rgba(255, 255, 255, 0.7);
-    --col-text: #E6E4E4;
 }
 
 html {
@@ -58,6 +58,8 @@ nav {
 }
 
 ul {
+    font-family: Oswald,sans-serif;
+    font-size: 24px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -75,6 +77,7 @@ li>a {
 }
 
 section {
+    color: var(--col-text);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -123,6 +126,7 @@ img {
 }
 
 button {
+    color: var(--col-text);
     border-radius: 10px;
     padding: 10px;
     border: none;
@@ -159,7 +163,7 @@ a>i {
     padding: 40px;
     color: var(--col-primary-variant);
     &:hover {
-        color: var(--on-bg);
+        color: var(--on-primary);
     }
 }
 
@@ -169,8 +173,17 @@ a>i {
     z-index: 100;
     padding-right: 30px; 
 }
+
 .theme-toggle-container span {
     font-size: 1rem;
+}
+
+#theme-title {
+    color: var(--col-primary);
+}
+
+#theme-icon {
+    color: var(--col-primary);
 }
 
 .theme-switch {
