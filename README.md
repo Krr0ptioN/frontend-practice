@@ -1,18 +1,18 @@
-# 100 Project with Javascript
+# 20 Project with Javascript
 
 The purpose of this project is to practice react.js, javascript, css by building a series of small projects.
 
 ### JQuery
-- [X] [01 Quote Generator](https://github.com/krr0ption/frontend-practice/tree/main/qoute-generator)
-- [X] [02 Infinity Scroll](https://github.com/Krr0ptioN/frontend-practice/tree/main/infinity-scroll)
-- [X] [03 Picture In Picture](https://github.com/Krr0ptioN/frontend-practice/tree/main/picture-in-picture)
-- [X] [04 Joke Teller](https://github.com/Krr0ptioN/frontend-practice/tree/main/joke-teller)
-- [X] [07 Navigation Nation](https://github.com/Krr0ptioN/frontend-practice/tree/main/navigation-notion)
-- [X] [09 Custom Countdown](https://github.com/Krr0ptioN/frontend-practice/tree/main/custom-countdown)
-- [X] [10 Book Manager](https://github.com/Krr0ptioN/frontend-practice/tree/main/bookmark-manager)
-- [X] [13 Spock Rock Game](https://github.com/Krr0ptioN/frontend-practice/tree/main/spock-rock-game)
-- [X] [17 Calculator](https://github.com/Krr0ptioN/frontend-practice/tree/main/calculator)
-- [ ] 05 Light & Dark Mode
+- [X] [01 Quote Generator](/qoute-generator/)
+- [X] [02 Infinity Scroll](/infinite-scroll/)
+- [X] [03 Picture In Picture](/picture-in-picture/)
+- [X] [04 Joke Teller](/joke-teller/)
+- [X] [07 Navigation Nation](/navigation-notion/)
+- [X] [09 Custom Countdown](/custom-countdown/)
+- [X] [10 Book Manager](/bookmark-manager/)
+- [X] [13 Spock Rock Game](/spock-rock-game/)
+- [X] [17 Calculator](/calculator/)
+- [X] [05 Light & Dark Mode](/light-dark-mode/)
 - [ ] 06 Animated Template
 ### React JS
 - [ ] 08 Music Player

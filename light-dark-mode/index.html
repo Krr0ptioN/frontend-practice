@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Light Dark Mode</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+        <div class="theme-toggle-container">
+            <span class="theme-icon">
+                <span id="theme-title">Light Mode</span>
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </span>
+            <label class="theme-switch">
+                <input type="checkbox">
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </nav>
+    <section id="home">
+        <h1 class="title">Beutiful Website</h1>
+        <div class="subtitle">Welcome to this single page website with theme toggle feature</div>
+    </section>
+    <section id="about">
+        <h1 class="title">Undraw Illustrations</h1>
+        <div class="figures-container">
+            <div class="figure-container"><span class="figure-title">Web
+                    Innovation</span><img id="figure-web-innovation" src="img/undraw_proud_coder_light.svg" alt="">
+            </div>
+            <div class="figure-container"><span class="figure-title">Problem
+                    Solving</span><img id="figure-problem-solving" src="img/undraw_feeling_proud_light.svg" alt="">
+            </div>
+            <div class="figure-container"><span class="figure-title">High Concept</span><img
+                    src="img/undraw_conceptual_idea_light.svg" id="figure-high-concept" alt=""></div>
+        </div>
+    </section>
+    <section id="projects">
+        <h1 class="title">Buttons</h1>
+        <div class="buttons">
+            <button class="btn-primary">Primary</button>
+            <button class="btn-secondary">Secondary</button>
+            <button class="btn-primary btn-disabled">Disabled</button>
+            <button class="btn-outlined-primary">Outlined</button>
+            <button class="btn-outlined-secondary">Alt outline</button>
+            <button class="btn-outlined-primary btn-disabled">Disabled</button>
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
+            pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud
+            nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+            pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem
+            duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt
+            duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris
+            sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="social-media-container">
+            <a href="https://"><i class="fab fa-github"></i></a>
+            <a href="https://"><i class="fab fa-facebook"></i></a>
+            <a href="https://"><i class="fab fa-linkedin"></i></a>
+            <a href="https://"><i class="fab fa-medium"></i></a>
+            <a href="https://"><i class="fab fa-instagram"></i></a>
+            <a href="https://"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
