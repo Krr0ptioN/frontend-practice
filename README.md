@@ -12,7 +12,7 @@ The purpose of this project is to practice react.js, javascript, css by building
 - [X] [10 Book Manager](https://github.com/Krr0ptioN/frontend-practice/tree/main/bookmark-manager)
 - [X] [13 Spock Rock Game](https://github.com/Krr0ptioN/frontend-practice/tree/main/spock-rock-game)
 - [X] [17 Calculator](https://github.com/Krr0ptioN/frontend-practice/tree/main/calculator)
-- [ ] 05 Light & Dark Mode
+- [X] 05 Light & Dark Mode
 - [ ] 06 Animated Template
 ### React JS
 - [ ] 08 Music Player
