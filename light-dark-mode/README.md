@@ -1,7 +1,7 @@
 # Light & Dark Mode
 
-![Light Mode](./img/light-mode.png)
-![Dark Mode](./img/dark-mode.png)
+![Light Mode](./docs/light-mode.png)
+![Dark Mode](./docs/dark-mode.png)
 
 ## Description
 Basic switch theme functionality for a single page website. 
