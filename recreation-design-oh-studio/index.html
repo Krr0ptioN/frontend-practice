@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- TODO Project Title -->
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000',
+                        secondary: '#7f7f7f',
+                        filler: '#e8e5e480',
+                        alt: '#fff',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav
+        class="flex fixed top-5 left-1/2 z-50 items-center rounded-full transform -translate-x-1/2 bg-filler backdrop-filter backdrop-grayscale backdrop-blur-md">
+        <ul class="flex flex-row justify-center items-center">
+            <li class="py-2 px-6 m-1 text-sm rounded-full bg-alt"><a href="/">Home</a></li>
+            <li class="py-2 px-6 m-1 text-sm rounded-full"><a href="./profile.html">Profile</a></li>
+            <li class="py-2 px-6 m-1 text-sm rounded-full"><a href="./contacts.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div
+        class="fixed bottom-5 left-1/2 z-50 py-2 px-4 text-sm bg-black rounded-full transform -translate-x-1/2 text-alt">
+        <a href="">
+            <i class="fas fa-asterisk"></i>
+            <span class="pl-2">
+                Shop
+            </span>
+        </a>
+    </div>
+    <section class="flex flex-col justify-center items-center w-full h-[70vh]" data-aos="fade-up"
+        data-aos-duration="2000">
+        <div
+            class="p-10 w-2/3 font-serif text-center text-bold item-center min-[640px]:text[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[5rem]">
+            A Brand and product designer working with clients globally
+        </div>
+        <div class="flex flex-row items-center text-sm">
+            <div class="p-1 text-center">Expertise</div>
+            <div class="p-1 px-3 m-1 text-center rounded-full bg-filler">Branding</div>
+            <div class="p-1 px-3 m-1 text-center rounded-full bg-filler">Product</div>
+            <div class="p-1 px-3 m-1 text-center rounded-full bg-filler">Design System</div>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-2 gap-4 p-[10%] auto" data-aos="fade-up" data-aos-duration="2000">
+        <div
+            class="bg-center h-[30vh] bg-cover bg-[url('https://images.pexels.com/photos/18971850/pexels-photo-18971850/free-photo-of-view-of-a-snowcapped-mountain.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load')] w-full rounded-lg h-[40vh]">
+            <div
+                class="w-full h-full rounded-lg transition-all duration-200 group hover:backdrop-brightness-50 hover:backdrop-blur-lg">
+                <div class="flex hidden flex-row justify-between items-center p-6 h-auto group-hover:flex">
+                    <span class="text-lg font-semibold group-hover:block text-alt">Mountains</span>
+                    <i class="p-5 rounded-full fas fa-external-link-alt bg-alt text-md"></i>
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-center h-[30vh] bg-cover bg-[url('https://images.pexels.com/photos/10990271/pexels-photo-10990271.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load')] w-full rounded-lg h-[40vh]">
+            <div
+                class="w-full h-full rounded-lg transition-all duration-200 group hover:backdrop-brightness-50 hover:backdrop-blur-lg">
+                <div class="flex hidden flex-row justify-between items-center p-6 h-auto group-hover:flex">
+                    <span class="text-lg font-semibold group-hover:block text-alt">Native</span>
+                    <i class="p-5 rounded-full fas fa-external-link-alt bg-alt text-md"></i>
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-center h-[30vh] bg-cover bg-[url('https://images.pexels.com/photos/13796755/pexels-photo-13796755.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load')] w-full rounded-lg h-[40vh]">
+            <div
+                class="w-full h-full rounded-lg transition-all duration-200 group hover:backdrop-brightness-50 hover:backdrop-blur-lg">
+                <div class="flex hidden flex-row justify-between items-center p-6 h-auto group-hover:flex">
+                    <span class="text-lg font-semibold group-hover:block text-alt">China Apart</span>
+                    <i class="p-5 rounded-full fas fa-external-link-alt bg-alt text-md"></i>
+                </div>
+            </div>
+        </div>
+        <div
+            class="bg-center h-[30vh] bg-cover bg-[url('https://images.pexels.com/photos/18434049/pexels-photo-18434049/free-photo-of-a-motorcycle-is-parked-in-a-showroom.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load')] w-full rounded-lg h-[40vh]">
+            <div
+                class="w-full h-full rounded-lg transition-all duration-200 group hover:backdrop-brightness-50 hover:backdrop-blur-lg">
+                <div class="flex hidden flex-row justify-between items-center p-6 h-auto group-hover:flex">
+                    <span class="text-lg font-semibold group-hover:block text-alt">Classic</span>
+                    <i class="p-5 rounded-full fas fa-external-link-alt bg-alt text-md"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="flex flex-col justify-center items-center w-full h-[50vh]" data-aos="fade-up"
+        data-aos-duration="2000">
+        <div class="text-4xl font-bold">Let's work together</div>
+        <a class="text-3xl font-bold text-secondary" href="">Get in touch</a>
+    </section>
+    <footer class="flex flex-row justify-between py-5 px-[10%] text-sm font-semibold">
+        <div>
+            Copyright 2023
+        </div>
+        <div>
+            <a href="https://twitter.com" class="p-1">Twitter</a>
+            <a href="https://linkedin.com" class="p-1">Linkedin</a>
+            <a href="me@email.com" class="p-1">Mail</a>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+
+</html>
