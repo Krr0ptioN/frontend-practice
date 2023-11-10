@@ -13,11 +13,15 @@ The purpose of this project is to practice react.js, javascript, css by building
 - [X] [13 Spock Rock Game](/spock-rock-game/)
 - [X] [17 Calculator](/calculator/)
 - [X] [05 Light & Dark Mode](/light-dark-mode/)
-- [ ] 06 Animated Template
+- [X] [06 Recreation Design Oh Studio](/recreation-design-oh-studio/)
+    - **Stack:** Tailwind CSS, AOS
 ### React JS
 - [ ] 08 Music Player
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 12 Form Validator
+    - **Stack:** Next JS, React JS, Tailwind CSS
 - [ ] 14 NASA APOD
+    - **Stack:** Next JS, React JS, Tailwind CSS
 - [ ] 15 Math Sprint Game
 - [ ] 16 Drag n Drop
 - [ ] 18 Splash Page 
