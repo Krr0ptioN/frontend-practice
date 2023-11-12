@@ -17,10 +17,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "pnpm build:style && react-scripts start",
+    "build": "pnpm build:style && react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:style": "postcss -w src/index.css -o src/assets/main.css",
+    "build:style": "postcss src/index.css -o src/assets/main.css"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^9.3.0",
+    "tailwindcss": "^3.3.5"
   }
 }
