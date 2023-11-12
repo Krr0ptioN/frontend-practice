@@ -58,8 +58,6 @@ export const Form: React.FC<IForm> = ({ children }) => {
                         break;
                     }
                     break;
-                default:
-                // Handle other fields' validation if needed
             }
         });
         return isAllFieldsValid;
