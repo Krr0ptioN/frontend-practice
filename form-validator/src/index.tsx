@@ -1,11 +1,20 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import './assets/main.css';
+import { Field } from './components/Field';
+import { Form } from './components/Form';
+
 
 const App = () => {
     return (
-        <div>
-            <h1>Form Validator</h1>
+        <div className='flex justify-center items-center w-screen h-screen bg-gray-400'>
+            <div className='flex flex-col justify-between items-center p-6 w-1/3 bg-white rounded-md h-[70vh]'>
+                <h2 className='text-2xl'>Sign Up Today!</h2>
+                <Form />
+            </div>
         </div>
     );
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const container = document.getElementById('root');
+const root = createRoot(container!);
+root.render(<App />);
