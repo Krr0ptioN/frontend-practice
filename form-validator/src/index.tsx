@@ -6,8 +6,8 @@ import { Form } from './components/Form';
 const App = () => {
     return (
         <div className='flex justify-center items-center w-screen h-screen bg-gray-400'>
-            <div className='flex flex-col justify-between items-center p-6 w-1/3 bg-white rounded-md h-[70vh]'>
-                <h2 className='text-2xl'>Sign Up Today!</h2>
+            <div className='flex flex-col justify-center items-center p-6 w-1/3 h-auto bg-white rounded-md'>
+                <h2 className='px-5 text-2xl font-bold'>Sign Up Today!</h2>
                 <Form />
             </div>
         </div>
