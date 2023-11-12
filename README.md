@@ -18,12 +18,17 @@ The purpose of this project is to practice react.js, javascript, css by building
 ### React JS
 - [ ] 08 Music Player
     - **Stack:** React JS, Tailwind CSS
-- [ ] 12 Form Validator
-    - **Stack:** Next JS, React JS, Tailwind CSS
+- [X] 12 Form Validator
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 14 NASA APOD
-    - **Stack:** Next JS, React JS, Tailwind CSS
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 15 Math Sprint Game
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 16 Drag n Drop
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 18 Splash Page 
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 19 Paint Clone
+    - **Stack:** React JS, Tailwind CSS
 - [ ] 20 Pong
+    - **Stack:** React JS, Tailwind CSS
