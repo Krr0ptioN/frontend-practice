@@ -1,6 +1,5 @@
 import { createRoot } from 'react-dom/client';
 import './assets/main.css';
-import { Field } from './components/Field';
 import { Form } from './components/Form';
 
 
