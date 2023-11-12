@@ -40,7 +40,7 @@ export const Form: React.FC<IForm> = ({ children }) => {
                         break;
                     }
                     break;
-                case 'phone':
+                case 'phone-number':
                     if (!telValidation(fieldValue)) {
                         isAllFieldsValid = false;
                         break;
