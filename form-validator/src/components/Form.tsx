@@ -67,10 +67,10 @@ export const Form: React.FC<IForm> = ({ children }) => {
         e.preventDefault();
         if (isValidated()) {
             console.log("Form submitted with data:", formData);
-            setMsgStatusStyle('border-green-400 bg-white text-green-400');
+            setMsgStatusStyle('border-green-400 bg-white text-green-600');
             setMsgStatus('All fields are valid!');
         } else {
-            setMsgStatusStyle('border-red-500 bg-white text-red-500');
+            setMsgStatusStyle('border-red-500 bg-white text-red-700');
             setMsgStatus('Invalid input in one or more fields.');
         }
     };
