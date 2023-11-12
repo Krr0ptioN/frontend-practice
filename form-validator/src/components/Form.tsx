@@ -1,4 +1,9 @@
 import { Field } from "./Field";
+import {
+    emailValidation, telValidation,
+    fullNameValidation, passwordValidation,
+    siteValidation
+} from "../utils/validation";
 import { useState } from "react";
 interface IForm extends React.PropsWithChildren {
 
@@ -6,6 +11,7 @@ interface IForm extends React.PropsWithChildren {
 
 export const Form: React.FC<IForm> = ({ children }) => {
     const [formData, setFormData] = useState<{ [key: string]: string }>({});
+    const [validated, setValidated] = useState<boolean>(false);
     const handleFieldValueChange = (id: string, value: string) => {
         setFormData((prevFormData: any) => ({ ...prevFormData, [id]: value }));
     }
@@ -18,27 +24,11 @@ export const Form: React.FC<IForm> = ({ children }) => {
             console.log('Invalid password');
     };
 
-    const passwordValidation = (value: string) => {
-        return /^.{8,}$/.test(value);
-    }
-    const siteValidation = (value: string) => {
-        const isValidURL = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w.-]*)*\/?$/;
-        return isValidURL.test(value);
-    }
-
-    const fullNameValidation = (value: string) => {
-        return /^[A-Za-z\s\.'-]*$/.test(value);
-    }
-    const telValidation = (value: string) => {
-        return /^\+?[0-9\s\-]+$/.test(value);
-    }
-    const emailValidation = (value: string) => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-    }
-
     const confirmedPasswordValidation = (value: string) => {
         return formData['password'] === value;
     }
+
+
 
     return (
         <form onSubmit={handleSubmit}>
@@ -48,7 +38,7 @@ export const Form: React.FC<IForm> = ({ children }) => {
             <Field onFieldChange={handleFieldValueChange} inputValidation={siteValidation} placeholder='https://site.com' id='website-url' type='url'>Website URL</Field>
             <Field onFieldChange={handleFieldValueChange} inputValidation={passwordValidation} placeholder='Create password (Min. 8 character)' id='password' type='password'>Password</Field>
             <Field onFieldChange={handleFieldValueChange} inputValidation={confirmedPasswordValidation} placeholder='Confirm Password' id='confirm-password' type='password'>Confirm Password</Field>
-            <button type="submit">Submit</button>
+            <button className="p-3 my-3 w-full text-2xl font-bold text-white bg-black rounded-md h-17" type="submit">Register</button>
         </form>
     )
 };
