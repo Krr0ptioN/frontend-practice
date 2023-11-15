@@ -7,10 +7,10 @@ export const siteValidation = (value: string) => {
 }
 
 export const fullNameValidation = (value: string) => {
-    return /^[A-Za-z\s\.'-]*$/.test(value);
+    return /^[A-Za-z\s.'-]*$/.test(value);
 }
 export const telValidation = (value: string) => {
-    return /^\+?[0-9\s\-]+$/.test(value);
+    return /^\+?[0-9\s-]+$/.test(value);
 }
 export const emailValidation = (value: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);

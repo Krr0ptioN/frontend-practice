@@ -2,14 +2,20 @@ import { Field } from "./Field";
 import {
     emailValidation, telValidation,
     fullNameValidation, passwordValidation,
-    siteValidation
+    siteValidation,
 } from "../utils/validation";
 import { useState, useEffect } from "react";
-interface IForm extends React.PropsWithChildren {
 
+
+const validation = {
+    'password': passwordValidation,
+    'full-name': fullNameValidation,
+    'phone-number': telValidation,
+    'email': emailValidation,
+    'website-url': siteValidation,
 }
 
-export const Form: React.FC<IForm> = ({ children }) => {
+export const Form: React.FC = () => {
     const [formData, setFormData] = useState<{ [key: string]: string }>({});
     const [msgStatusStyle, setMsgStatusStyle] = useState('border-gray-400 bg-white text-black');
     const [msgStatus, setMsgStatus] = useState('Don\'t rush :)');
@@ -20,48 +26,15 @@ export const Form: React.FC<IForm> = ({ children }) => {
     const isValidated = () => {
         let isAllFieldsValid = true;
 
-        Object.entries(formData).forEach(([fieldName, fieldValue]) => {
-            switch (fieldName) {
-                case 'password':
-                    if (!passwordValidation(fieldValue)) {
-                        isAllFieldsValid = false;
-                        break;
-                    }
-                    break;
-                case 'confirm-password':
-                    if (!confirmedPasswordValidation(fieldValue)) {
-                        isAllFieldsValid = false;
-                        break;
-                    }
-                    break;
-                case 'full-name':
-                    if (!fullNameValidation(fieldValue)) {
-                        isAllFieldsValid = false;
-                        break;
-                    }
-                    break;
-                case 'phone-number':
-                    if (!telValidation(fieldValue)) {
-                        isAllFieldsValid = false;
-                        break;
-                    }
-                    break;
-                case 'email':
-                    if (!emailValidation(fieldValue)) {
-                        isAllFieldsValid = false;
-                        break;
-                    }
-                    break;
-                case 'website-url':
-                    if (!siteValidation(fieldValue)) {
-                        isAllFieldsValid = false;
-                        break;
-                    }
-                    break;
+        Object.keys(formData).forEach((fieldName) => {
+            if (validation[fieldName as keyof typeof validation]) {
+                const fieldValue = formData[fieldName];
+                if (!validation[fieldName as keyof typeof validation](fieldValue)) {
+                    isAllFieldsValid = false;
+                }
             }
         });
         return isAllFieldsValid;
-
     };
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
