@@ -16,8 +16,8 @@ The purpose of this project is to practice react.js, javascript, css by building
 - [X] [06 Recreation Design Oh Studio](/recreation-design-oh-studio/)
     - **Stack:** Tailwind CSS, AOS
 ### React JS
-- [ ] 08 Music Player
-    - **Stack:** React JS, Tailwind CSS
+- [-] [08 Music Player](https://github.com/krr0ption/musica)
+    - **Stack:** React JS, Tailwind CSS, Nest JS, Mongodb
 - [X] 12 Form Validator
     - **Stack:** React JS, Tailwind CSS
 - [ ] 14 NASA APOD
